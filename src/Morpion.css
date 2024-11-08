@@ -1,51 +1,87 @@
-/* Conteneur global pour centrer le contenu */
-.tic-tac-toe-container {
+/* Style global pour le jeu */
+.tic-tac-toe {
    display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-   /* 100% de la hauteur de la fenêtre */
    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-family: Arial, sans-serif;
+   color: #333;
+   margin-top: 30px;
 }
 
-/* Style principal du jeu */
-.tic-tac-toe {
-   text-align: center;
-   font-family: Arial, sans-serif;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   /* Centrer horizontalement le contenu */
-   justify-content: center;
+h1 {
+   color: #333;
+   font-size: 2.5em;
+   margin-bottom: 20px;
 }
 
 .board {
    display: grid;
    grid-template-columns: repeat(3, 100px);
-   grid-gap: 5px;
-   margin: 20px auto;
+   grid-gap: 10px;
+   margin: 20px 0;
 }
 
+/* Style pour les cases */
 .square {
    width: 100px;
    height: 100px;
-   font-size: 2em;
+   font-size: 2.5em;
    cursor: pointer;
-   background-color: #f0f0f0;
+   background-color: #ffffff;
    border: 2px solid #333;
+   border-radius: 8px;
+   color: #333;
    display: flex;
    align-items: center;
    justify-content: center;
+   transition: all 0.2s ease-in-out;
 }
 
+.square:hover {
+   background-color: #f1f1f1;
+   transform: scale(1.05);
+}
+
+.square:active {
+   background-color: #e0e0e0;
+   transform: scale(1);
+}
+
+/* Style pour X et O */
+.square.X {
+   color: #FF5733;
+   /* Couleur pour le X */
+}
+
+.square.O {
+   color: #3498DB;
+   /* Couleur pour le O */
+}
+
+/* Statut du jeu */
 .status {
-   font-size: 1.2em;
-   margin-top: 10px;
+   font-size: 1.5em;
+   margin-top: 20px;
 }
 
+/* Bouton de réinitialisation */
 .reset-button {
    margin-top: 20px;
    padding: 10px 20px;
    font-size: 1em;
+   background-color: #3498DB;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
    cursor: pointer;
+   transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+   background-color: #2c80b4;
+}
+
+.reset-button:active {
+   background-color: #24648a;
 }

@@ -65,7 +65,7 @@ function Morpion() {
          </div>
          <div className="status">
             {winner ? (
-               <p>🎉 Le joueur {winner} a gagné ! 🎉</p>
+               <p>Le joueur {winner} a gagné ! 🎉</p>
             ) : (
                <p>Tour du joueur : {isXNext ? "X" : "O"}</p>
             )}
